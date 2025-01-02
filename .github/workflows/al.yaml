@@ -1,0 +1,26 @@
+name: Malik Daniyal
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+jobs:
+  al-job:
+    runs-on: ubuntu_latest
+    steps:
+      - name: Welcome steps 
+        run: echo "Welcome to gitub actions"
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Repository Information
+        run: |
+          echo "Repository name: ${{gitub.repository}}"
+          echo "Type of event: ${{github.event_name}}"
+          git --version
+          git branch 
+          git log
+
+
+     
