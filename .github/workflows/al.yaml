@@ -13,7 +13,7 @@ jobs:
       - name: Welcome steps 
         run: echo "Welcome to gitub actions"
       - name: Checkout repository
-        run: actions/checkout@v4
+        uses: actions/checkout@v4
       - name: Repository Information
         run: |
          echo "Repository name: ${{gitub.repository}}"
@@ -21,6 +21,6 @@ jobs:
          git --version
          git branch 
          git log
-         
+
 
      
